@@ -128,4 +128,4 @@ else
 fi
 
 #mk_glpk "glpk-4.65.tar.gz" && mk_fftw "fftw-3.3.8.tar.gz" && mk_openblas "v0.3.6.tar.gz" && mk_octave_510 "octave-5.1.0.tar.gz"
-mk_glpk "glpk-4.65.tar.gz" && mk_fftw "fftw-3.3.8.tar.gz" && mk_openblas "v0.3.6.tar.gz" && mk_octave_422 "octave-4.2.2.tar.gz"
+mk_glpk "glpk-4.65.tar.gz" && mk_fftw "fftw-3.3.8.tar.gz" && mk_openblas "v0.3.18.tar.gz" && mk_octave_422 "octave-4.2.2.tar.gz"
