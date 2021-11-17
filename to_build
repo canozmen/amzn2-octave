@@ -3,16 +3,16 @@
 set -e
 
 #need to pull in tools and some develoment libraries (texinfo so octave is quiet during 'make check')
-sudo yum update -y
-sudo yum groupinstall -y "Development tools" \
-	&& sudo yum install -y zlib-devel libcurl-devel ncurses-devel readline-devel pcre-devel texinfo
+yum update -y
+yum groupinstall -y "Development tools" \
+	&& yum install -y zlib-devel libcurl-devel ncurses-devel readline-devel pcre-devel texinfo
 
 #let's avoid hdd/ssd - optional (need ~5GB)
 pp="/shared"
 if [ -d "${pp}/build_octave" ]; then
 	cd "${pp}/build_octave"
 else
-	sudo mkdir -p "${pp}" && sudo chmod 777 "${pp}" && sudo mount -o size=5G -t tmpfs tmpfs "${pp}" \
+	mkdir -p "${pp}" && chmod 777 "${pp}" && mount -o size=5G -t tmpfs tmpfs "${pp}" \
 		&& mkdir "${pp}/build_octave" && cp -r * "${pp}/build_octave" && cd "${pp}/build_octave"
 fi
 
