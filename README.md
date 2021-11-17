@@ -19,7 +19,7 @@ if 'processor_type' > native (=compiling machine), then tests for openBLAS and O
 
 <b>quick:</b> on running amazon linux 2 instance (vm or ec2) with internet access, then e.g.
 	
-		git clone https://github.com/com-entonos/amzn2-octave.git && cd amzn2-octave
+		git clone git@github.com:canozmen/amzn2-octave.git && cd amzn2-octave
 		./to_build /opt/octave
 		export PATH:$PATH:/opt/octave/bin
 		export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/octave/lib
