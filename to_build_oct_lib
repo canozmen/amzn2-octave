@@ -51,7 +51,7 @@ function mk_glpk {
 function mk_fftw {
 	z="$1" && cd "$o" && get_tarball "http://www.fftw.org/${z}" && \
 		j=$(echo $z|sed "s/.tar.gz//"|sed "s/.tgz//"|sed "s/.tar.bz2//") && tar -xvf $z && cd $j && \
-		OPT="--enable-sse2 ${FFTW}" && \
+		OPT=" ${FFTW}" && \
 		./configure --prefix="${p}" ${OPT} F77=gfortran CC=gcc > >(tee -a ../fftw.log) 2> >(tee -a ../fftw.err >&2) && \
 		make -j${NJ} > >(tee -a ../fftw.log) 2> >(tee -a ../fftw.err >&2) && \
 # make check may fail if natve < $ARCH
